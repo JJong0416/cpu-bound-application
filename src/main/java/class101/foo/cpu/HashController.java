@@ -19,7 +19,7 @@ public class HashController {
         return input;
     }
 
-    @RequestMapping("/hash/{test}")
+    @RequestMapping("/test/{test}")
     public String getMessage(@PathVariable("test") String test){
         return test;
     }
