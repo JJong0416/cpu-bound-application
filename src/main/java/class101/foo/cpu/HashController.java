@@ -19,14 +19,9 @@ public class HashController {
         return input;
     }
 
-    @RequestMapping("/test/{test}")
-    public String getMessage(@PathVariable("test") String test){
-        return test;
-    }
-
     @RequestMapping("/hello")
     public String hello() {
-        return "hello";
+        return "goodbye";
     }
 
     private String getMD5Digest(String input) throws NoSuchAlgorithmException {
