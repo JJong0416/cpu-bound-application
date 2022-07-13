@@ -19,6 +19,11 @@ public class HashController {
         return input;
     }
 
+    @RequestMapping("/hash/{test}")
+    public String getMessage(@PathVariable("test") String test){
+        return test;
+    }
+
     @RequestMapping("/hello")
     public String hello() {
         return "hello";
@@ -28,8 +33,7 @@ public class HashController {
         MessageDigest md = MessageDigest.getInstance("MD5");
         md.update(input.getBytes());
         byte[] digest = md.digest();
-        String myHash = DatatypeConverter
-                .printHexBinary(digest).toUpperCase();
+        String myHash = DatatypeConverter.printHexBinary(digest).toUpperCase();
 
         return myHash;
     }
